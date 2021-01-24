@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring JavaScript</title>
+    <style>
+        article{
+            border: 1px solid red;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Explore The JavaScript DOM</h1>
+        </section>
+        <section>
+            <article id="first-article">
+                <h1>Article 1</h1>
+                <p class="author">Author-1</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perspiciatis rem adipisci debitis blanditiis sequi quia consequuntur odio eligendi. A eaque itaque nihil dolor. Molestias neque numquam rerum possimus nobis!</p>
+            </article>
+            <article class="special">
+                <h1>Article 2</h1>
+                <p class="author">Author-2</p>
+                <p>Eveniet nisi nesciunt temporibus autem voluptatibus esse error hic est velit cumque sunt, officiis libero aut dicta culpa perferendis quidem. Nihil magni amet ipsa. Incidunt tempora libero dicta molestias eos.</p>
+            </article>
+            <article class="special">
+                <h1>Article 3</h1>
+                <p class="author">Author-3</p>
+                <p>Nesciunt numquam atque repellat fugiat, perspiciatis iste doloribus sed odio odit similique debitis sequi expedita facere! Quibusdam mollitia voluptas, labore laboriosam maxime accusantium quae delectus quis ut necessitatibus blanditiis nulla.</p>
+            </article>
+            <article>
+                <h1>Gift Items</h1>
+                <ul id="gift-list">
+                    <li>gift item -1</li>
+                    <li>gift item -2</li>
+                    <li>gift item -3</li>
+                    <li>gift item -4</li>
+                    <li>gift item -5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+        <script>
+            const article = document.getElementById('first-article')
+            const newPara = document.createElement('p')
+            newPara.innerHTML = 'This is a new Paragraph'
+            article.appendChild(newPara)
+
+            // add gift item on ul 
+            const ul = document.getElementById('gift-list')
+            const newItem = document.createElement('li')
+            newItem.innerHTML = 'New gift item'
+            ul.appendChild(newItem)
+        </script>
+    </body>
+</html>
